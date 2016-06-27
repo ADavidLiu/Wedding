@@ -1,0 +1,300 @@
+/* TABLE OF CONTENTS */
+/*
+    1. GENERAL STYLES
+    2. HEADER
+    3. NAVIGATION
+    4. CONTENT
+    5. BANNER
+    6. ASIDE
+    7. ARTICLES
+    8. FOOTER
+    9. MEDIA QUERIES
+*/
+/* 1. GENERAL STYLES */
+body {
+  background-image: url("images/bg.jpg");
+  padding: 20px 10px 30px 10px;
+  overflow-x: hidden; }
+
+.container {
+  max-width: 980px;
+  padding: 0 25px; }
+
+::selection {
+  background-color: #378fad;
+  color: white; }
+
+img {
+  -webkit-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  -ms-user-drag: none;
+  user-drag: none; }
+
+/* 2. HEADER */
+header {
+  background-image: url("images/header-bg.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 100% 100%;
+  min-height: 178px;
+  width: 100%;
+  position: relative; }
+  header img[alt="Logo"] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    padding: 0 10px; }
+
+/* 3. NAVIGATION */
+.navigation {
+  background-image: url("images/menu-bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  position: relative;
+  margin-bottom: -13px;
+  z-index: 2;
+  height: 75px; }
+  .navigation:after, .navigation:before {
+    content: "";
+    position: absolute;
+    width: 47px;
+    height: 63px;
+    right: -47px;
+    left: auto;
+    top: auto;
+    bottom: 0;
+    background-image: url("images/menu-ribbon-right.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center; }
+  .navigation:before {
+    left: -47px;
+    right: auto;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH; }
+  .navigation #menu {
+    border: none;
+    height: 242px; }
+  .navigation ul {
+    margin-top: 6px;
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    margin-left: 0;
+    transform: translateX(-50%);
+    text-align: center;
+    background-color: #468fa7; }
+  .navigation nav {
+    text-align: center;
+    position: relative; }
+    .navigation nav li:not(:last-child):after {
+      content: "";
+      position: absolute;
+      width: 0px;
+      height: 0px;
+      background-image: none;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      top: 50%;
+      bottom: auto;
+      left: auto;
+      right: -3px;
+      transform: translateY(-50%); }
+    .navigation nav li a:link,
+    .navigation nav li a:visited,
+    .navigation nav li a:hover,
+    .navigation nav li a:active {
+      text-decoration: none;
+      background-color: transparent;
+      text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.28);
+      color: #ffffff;
+      font: 400 19px / 18px 'Times New Roman'; }
+    .navigation nav .navbar-header {
+      text-align: center; }
+      .navigation nav .navbar-header button {
+        position: relative;
+        top: 5px; }
+    .navigation nav span.icon-bar {
+      background-color: white; }
+
+/* 4. CONTENT */
+.content {
+  background-color: white;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  padding: 40px 35px;
+  border: 4px solid #f8f8f3;
+  border-bottom: none;
+  position: relative; }
+  .content:before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    bottom: auto;
+    left: 0;
+    right: auto;
+    background-image: url("images/menu-shadow.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 55px;
+    z-index: 1; }
+  .content .divider {
+    margin: 23px 0; }
+    .content .divider div {
+      padding: 0; }
+    .content .divider img {
+      width: 100%; }
+
+/* 5. BANNER */
+.banner {
+  position: relative; }
+  .banner img {
+    width: 100%; }
+  .banner .banner-caption {
+    width: 100%;
+    background-color: rgba(70, 143, 167, 0.8);
+    position: absolute;
+    bottom: 0;
+    top: auto;
+    left: 0;
+    right: auto;
+    padding: 10px 15px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px; }
+    .banner .banner-caption h2 {
+      margin: 0;
+      color: #fdfdfc;
+      font: 400 23px / 22px 'Times New Roman';
+      margin-bottom: 7px; }
+    .banner .banner-caption p {
+      margin: 0;
+      color: #fdfdfc;
+      font: 400 13px / 18px 'Times New Roman'; }
+
+/* 6. ASIDE */
+aside {
+  background-image: url("images/aside-bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  padding: 30px 30px !important;
+  margin-top: 30px; }
+  aside .aside-article:not(:last-child) {
+    margin-bottom: 30px; }
+  aside h2 {
+    margin: 0;
+    margin-bottom: 12px;
+    color: #105568;
+    font: 400 13px / 18px Arial; }
+  aside p {
+    margin: 0;
+    color: #555555;
+    font: 400 11px / 16px Arial; }
+
+/* 7. ARTICLES */
+.articles .article-img,
+.articles .no-padding,
+.articles .main-article {
+  padding: 0; }
+.articles img {
+  width: 100%; }
+.articles h3 {
+  color: #105468;
+  font: 400 24px / 26px 'Times New Roman';
+  margin: 0;
+  margin-bottom: 20px; }
+  .articles h3.top-title {
+    margin-top: 15px; }
+.articles p {
+  color: #5b5b5b;
+  font: 400 13px / 22px Arial;
+  margin: 0; }
+.articles article img[alt="Divider"] {
+  margin: 13px 0; }
+.articles .sub-articles h4 {
+  color: #105568;
+  font: 400 13px / 18px 'Myriad Pro';
+  margin: 0;
+  margin-bottom: 7px; }
+.articles .sub-articles p {
+  color: #5b5b5b;
+  font: 400 11px / 14px Arial;
+  margin: 0; }
+
+/* 8. FOOTER */
+footer {
+  background-image: url("images/footer-bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  height: 103px;
+  text-align: center;
+  position: relative; }
+  footer:after, footer:before {
+    content: "";
+    position: absolute;
+    width: 37px;
+    height: 33px;
+    top: 0;
+    bottom: auto;
+    right: -37px;
+    left: auto;
+    background-image: url("images/footer-bg-ribbon.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center; }
+  footer:before {
+    right: auto;
+    left: -37px;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH; }
+  footer h3 {
+    color: #3389a9;
+    font: 400 12px / 26px Arial;
+    margin: 40px 0 0 0; }
+
+/* 9. MEDIA QUERIES */
+@media screen and (min-width: 768px) {
+  body {
+    padding-left: 0;
+    padding-right: 0; }
+
+  header img[alt="Logo"] {
+    left: 25px;
+    transform: translateY(-50%); }
+
+  aside {
+    margin-top: 0; }
+
+  .articles .main-article {
+    padding: 0 15px; }
+  .articles h3.top-title {
+    margin-top: 0; }
+
+  .navigation ul {
+    background-color: transparent;
+    width: 635px; }
+  .navigation nav li:not(:last-child):after {
+    width: 6px;
+    height: 6px;
+    background-image: url("images/menu-bullets.png"); }
+  .navigation nav li a {
+    font-size: 16px !important; } }
+@media screen and (min-width: 992px) {
+  .navigation ul {
+    width: 715px; }
+  .navigation nav li a {
+    font-size: 19px !important; } }
+
+/*# sourceMappingURL=main.css.map */
